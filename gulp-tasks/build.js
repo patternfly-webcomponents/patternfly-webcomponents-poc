@@ -32,14 +32,7 @@ module.exports = {
             outputStyle: !buildProd ? 'nested' : 'compressed',
           }).on('error', sass.logError)
         )
-        .pipe(
-          postcss([
-            autoprefixer({
-              // TODO: Optimize for modern browsers here
-              browsers: ['last 1 version', 'Firefox ESR', 'ie >= 11'],
-            }),
-          ])
-        )
+        .pipe(postcss([autoprefixer()]))
         .pipe(
           through2.obj((file, enc, done) => {
             file.contents = Buffer.from(`

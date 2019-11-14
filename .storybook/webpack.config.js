@@ -110,9 +110,7 @@ module.exports = ({ config, mode }) => {
             plugins: () => [
               ...(!useCustomProperties ? [] : [deduper()]),
               require('../postcss-fix-host-pseudo')(),
-              require('autoprefixer')({
-                browsers: ['last 1 version', 'ie >= 11'],
-              }),
+              require('autoprefixer')(),
             ],
             sourceMap: useStyleSourceMap,
           },
