@@ -72,7 +72,7 @@ module.exports = ({ config, mode }) => {
       test: /-story(-(angular|react))?\.[jt]sx?$/,
       use: [
         {
-          loader: require.resolve('@storybook/addon-storysource/loader'),
+          loader: require.resolve('@storybook/source-loader'),
           options: {
             parser: 'typescript',
             prettierConfig: {
@@ -110,9 +110,7 @@ module.exports = ({ config, mode }) => {
             plugins: () => [
               ...(!useCustomProperties ? [] : [deduper()]),
               require('../postcss-fix-host-pseudo')(),
-              require('autoprefixer')({
-                browsers: ['last 1 version', 'ie >= 11'],
-              }),
+              require('autoprefixer')(),
             ],
             sourceMap: useStyleSourceMap,
           },
