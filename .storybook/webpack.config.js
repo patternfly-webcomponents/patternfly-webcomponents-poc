@@ -72,7 +72,7 @@ module.exports = ({ config, mode }) => {
       test: /-story(-(angular|react))?\.[jt]sx?$/,
       use: [
         {
-          loader: require.resolve('@storybook/addon-storysource/loader'),
+          loader: require.resolve('@storybook/source-loader'),
           options: {
             parser: 'typescript',
             prettierConfig: {

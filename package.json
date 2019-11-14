@@ -7,7 +7,9 @@
     "es/**/*"
   ],
   "browserslist": [
-    "> .05%"
+    "last 1 version",
+    "Firefox ESR",
+    "ie >= 11"
   ],
   "scripts": {
     "build": "yarn build:modules && yarn build:bundle:dev && yarn build:bundle:prod && yarn cp:fonts",
