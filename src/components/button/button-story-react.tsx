@@ -18,7 +18,6 @@ const kinds = {
   [`Primary button (${BUTTON_KIND.PRIMARY})`]: BUTTON_KIND.PRIMARY,
   [`Secondary button (${BUTTON_KIND.SECONDARY})`]: BUTTON_KIND.SECONDARY,
   [`Danger button (${BUTTON_KIND.DANGER})`]: BUTTON_KIND.DANGER,
-  [`Ghost button (${BUTTON_KIND.GHOST})`]: BUTTON_KIND.GHOST,
 };
 
 const createProps = () => ({

@@ -8,7 +8,6 @@ const kinds = {
   [`Primary button (${BUTTON_KIND.PRIMARY})`]: BUTTON_KIND.PRIMARY,
   [`Secondary button (${BUTTON_KIND.SECONDARY})`]: BUTTON_KIND.SECONDARY,
   [`Danger button (${BUTTON_KIND.DANGER})`]: BUTTON_KIND.DANGER,
-  [`Ghost button (${BUTTON_KIND.GHOST})`]: BUTTON_KIND.GHOST,
 };
 
 const createProps = () => ({
@@ -23,7 +22,7 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('Default', () => ({
     template: `
-      <pf-btn [kind]="kind" [disabled]="disabled" [small]="small" [href]="href" (click)="onClick($event)">Button</bx-btn>
+      <pf-btn [kind]="kind" [disabled]="disabled" [small]="small" [href]="href" (click)="onClick($event)">Button</pf-btn>
     `,
     props: createProps(),
     moduleMetadata: {
