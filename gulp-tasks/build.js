@@ -34,10 +34,7 @@ module.exports = {
         )
         .pipe(
           postcss([
-            autoprefixer({
-              // TODO: Optimize for modern browsers here
-              browsers: ['last 1 version', 'Firefox ESR', 'ie >= 11'],
-            }),
+            autoprefixer(),
           ])
         )
         .pipe(

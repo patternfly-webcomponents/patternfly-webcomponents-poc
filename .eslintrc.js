@@ -37,7 +37,7 @@ module.exports = {
     {
       files: ['**/*.ts'],
       parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
+      plugins: ['@typescript-eslint/eslint-plugin'],
       rules: {
         'no-unused-vars': 0,
         '@typescript-eslint/no-unused-vars': 2,
@@ -46,7 +46,7 @@ module.exports = {
     {
       files: ['**/*-react.tsx'],
       parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint', 'react'],
+      plugins: ['@typescript-eslint/eslint-plugin', 'react'],
       rules: {
         'no-unused-vars': 0,
         '@typescript-eslint/no-unused-vars': 2,
