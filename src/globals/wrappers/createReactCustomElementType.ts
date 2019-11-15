@@ -115,6 +115,7 @@ const convertProps = (props: CustomElementTypeProps, descriptor: CustomElementPr
  * @param callback A callback function that runs as the custom events fire.
  * @returns A handle that allows to release all event listeners attached.
  */
+/*
 const attachEventListeners = (
   elem: HTMLElement,
   descriptor: CustomElementPropsDescriptor,
@@ -154,7 +155,7 @@ const attachEventListeners = (
     },
   };
 };
-
+*/
 /**
  * @param name The tag name of the custom element.
  * @param descriptor A descriptor for a set of React props for attributes of a custom element.
@@ -207,12 +208,12 @@ const createReactCustomElementType = (name: string, descriptor: CustomElementPro
      * @param propName The React prop name associated with the event listener.
      * @param event The event.
      */
-    private _handleEvent = (propName: string, event: Event) => {
-      const { [propName]: listener } = this.props;
-      if (listener) {
-        listener.call(event.currentTarget, event);
-      }
-    };
+    // private _handleEvent = (propName: string, event: Event) => {
+    //   const { [propName]: listener } = this.props;
+    //   if (listener) {
+    //     listener.call(event.currentTarget, event);
+    //   }
+    // };
 
     /**
      * Handles getting/losing the React `ref` object of this custom element.
@@ -224,7 +225,7 @@ const createReactCustomElementType = (name: string, descriptor: CustomElementPro
         this._eventListenersHandle = null;
       }
       if (elem) {
-        this._eventListenersHandle = attachEventListeners(elem, descriptor, this._handleEvent);
+        // this._eventListenersHandle = attachEventListeners(elem, descriptor, this._handleEvent);
       }
     };
 
