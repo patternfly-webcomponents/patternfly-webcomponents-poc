@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { html } from 'lit-element';
+import { html } from 'lit-html';
 import { storiesOf } from '@storybook/polymer';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
