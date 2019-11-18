@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit-html';
 import { storiesOf } from '@storybook/polymer';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
