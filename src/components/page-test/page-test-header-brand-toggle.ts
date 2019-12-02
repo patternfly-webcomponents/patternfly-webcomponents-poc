@@ -1,12 +1,12 @@
 import classnames from 'classnames';
 import { html, property, customElement, LitElement } from 'lit-element';
 import { pfPrefix } from '../../globals/settings';
-import styles from './page-test.scss';
+import styles from './page-test-header-brand-toggle.scss';
 
 /**
  * Page Header Brand.
  */
-@customElement(`${pfPrefix}-page-header-brand-toggle-test`)
+@customElement(`${pfPrefix}-page-test-header-brand-toggle`)
 class PFPageHeaderBrandToggleTest extends LitElement {
   /**
    * Additional button classes
