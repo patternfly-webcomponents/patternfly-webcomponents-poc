@@ -1,26 +1,26 @@
 @import '../base/base.scss';
 
 // testing host styles
-:host(#{$pf--prefix}-page) {
+:host(#{$pf--prefix}-page-test) {
   @import './patternfly-page-test.scss';
 }
 
-:host(#{$pf--prefix}-page-header) {
+:host(#{$pf--prefix}-page-test-header) {
   @import './patternfly-page-test.scss';
 }
 
-:host(#{$pf--prefix}-page-header-brand) {
+:host(#{$pf--prefix}-page-test-header-brand) {
   @import './patternfly-page-test.scss';
 }
 
-:host(#{$pf--prefix}-page-header-brand-toggle) {
+:host(#{$pf--prefix}-page-test-header-brand-toggle) {
   @import './patternfly-page-test.scss';
 }
 
-:host(#{$pf--prefix}-page-header-brand-link) {
+:host(#{$pf--prefix}-page-test-header-brand-link) {
   @import './patternfly-page-test.scss';
 }
 
-:host(#{$pf--prefix}-page-header-tools) {
+:host(#{$pf--prefix}-page-test-header-tools) {
   @import './patternfly-page-test.scss';
 }

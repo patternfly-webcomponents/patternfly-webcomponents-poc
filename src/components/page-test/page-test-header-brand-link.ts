@@ -1,12 +1,12 @@
 import classnames from 'classnames';
 import { html, property, customElement, LitElement } from 'lit-element';
 import { pfPrefix } from '../../globals/settings';
-import styles from './page-test.scss';
+import styles from './page-test-header-brand-link.scss';
 
 /**
  * Page Header Brand Link.
  */
-@customElement(`${pfPrefix}-page-header-brand-link-test`)
+@customElement(`${pfPrefix}-page-test-header-brand-link`)
 class PFPageHeaderBrandLinkTest extends LitElement {
   /**
    * Additional button classes
