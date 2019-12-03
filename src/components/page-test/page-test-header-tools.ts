@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { html, property, customElement, LitElement } from 'lit-element';
 import { pfPrefix } from '../../globals/settings';
-import styles from './page-test.scss';
+import styles from './page-test-header-tools.scss';
 
 /**
  * Page Header Tools.
