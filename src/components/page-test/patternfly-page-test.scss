@@ -1,3 +1,5 @@
+@import '../base/base.scss';
+
 // missing variables...
 $pf-global--breakpoint--xs: 0;
 $pf-global--breakpoint--sm: 576px;
@@ -5,11 +7,6 @@ $pf-global--breakpoint--md: 68px;
 $pf-global--breakpoint--lg: 992px;
 $pf-global--breakpoint--xl: 1200px;
 $pf-global--breakpoint--2xl: 1450px;
-
-// missing mixins...
-@mixin pf-t-dark($color: '--pf-global--Color--100') {
-  color: var(#{$color});
-}
 
 // URL.com/guidelines#layout
 .pf-c-page {
