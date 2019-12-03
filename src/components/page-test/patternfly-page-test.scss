@@ -1,13 +1,5 @@
 @import '../base/base.scss';
 
-// missing variables...
-$pf-global--breakpoint--xs: 0;
-$pf-global--breakpoint--sm: 576px;
-$pf-global--breakpoint--md: 68px;
-$pf-global--breakpoint--lg: 992px;
-$pf-global--breakpoint--xl: 1200px;
-$pf-global--breakpoint--2xl: 1450px;
-
 // URL.com/guidelines#layout
 .pf-c-page {
   --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
