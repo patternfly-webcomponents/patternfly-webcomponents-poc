@@ -35,14 +35,9 @@ storiesOf('Page Test', module)
                 />
               </pf-page-test-header-brand-link>
             </pf-page-test-header-brand>
-            <pf-page-header-tools>
+            <pf-page-test-header-tools>
               <div class="pf-c-page__header-tools-group pf-m-icons">
-                <button
-                  id="simple-example-uid-01"
-                  aria-label="Notifications actions"
-                  class="pf-c-button pf-m-plain"
-                  type="button"
-                >
+                <button class="pf-c-button pf-m-plain" type="button" aria-label="Alerts">
                   <svg
                     style="vertical-align:-0.125em"
                     fill="currentColor"
@@ -58,7 +53,7 @@ storiesOf('Page Test', module)
                     ></path>
                   </svg>
                 </button>
-                <button id="simple-example-uid-02" aria-label="Settings actions" class="pf-c-button pf-m-plain" type="button">
+                <button class="pf-c-button pf-m-plain" type="button" aria-label="Settings">
                   <svg
                     style="vertical-align:-0.125em"
                     fill="currentColor"
@@ -78,12 +73,10 @@ storiesOf('Page Test', module)
               <div class="pf-c-page__header-tools-group">
                 <div class="pf-c-dropdown">
                   <button
-                    aria-label="Actions"
-                    id="pf-toggle-id-16"
-                    class="pf-c-dropdown__toggle pf-m-plain"
-                    type="button"
+                    class="pf-c-dropdown__toggle pf-m-mobile pf-m-plain"
+                    id="page-layout-horizontal-nav-dropdown-kebab-right-aligned-1-button"
                     aria-expanded="false"
-                    aria-haspopup="true"
+                    aria-label="Actions"
                   >
                     <svg
                       style="vertical-align:-0.125em"
@@ -100,32 +93,57 @@ storiesOf('Page Test', module)
                       ></path>
                     </svg>
                   </button>
-                </div>
-                <div class="pf-c-dropdown">
-                  <button
-                    id="pf-toggle-id-17"
-                    class="pf-c-dropdown__toggle pf-m-plain"
-                    type="button"
-                    aria-expanded="false"
-                    aria-haspopup="true"
+                  <ul
+                    class="pf-c-dropdown__menu pf-m-align-right"
+                    aria-labelledby="page-layout-horizontal-nav-dropdown-kebab-right-aligned-1-button"
+                    hidden
                   >
-                    <span class="pf-c-dropdown__toggle-text">Kyle Baker</span>
-                    <svg
-                      style="vertical-align:-0.125em"
-                      fill="currentColor"
-                      height="1em"
-                      width="1em"
-                      viewBox="0 0 320 512"
-                      aria-hidden="true"
-                      role="img"
-                      class="pf-c-dropdown__toggle-icon"
+                    <li>
+                      <a class="pf-c-dropdown__menu-item" href="#">Link</a>
+                    </li>
+                    <li>
+                      <button class="pf-c-dropdown__menu-item">Action</button>
+                    </li>
+                    <li>
+                      <a class="pf-c-dropdown__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1"
+                        >Disabled link</a
+                      >
+                    </li>
+                    <li>
+                      <button class="pf-c-dropdown__menu-item" disabled>Disabled action</button>
+                    </li>
+                    <li class="pf-c-dropdown__separator" role="separator"></li>
+                    <li>
+                      <a class="pf-c-dropdown__menu-item" href="#">Separated link</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pf-m-user">
+                  <div class="pf-c-dropdown">
+                    <button
+                      class="pf-c-dropdown__toggle pf-m-plain"
+                      id="page-layout-horizontal-nav-dropdown-button"
+                      aria-expanded="false"
                     >
-                      <path
-                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                        transform=""
-                      ></path>
-                    </svg>
-                  </button>
+                      <span class="pf-c-dropdown__toggle-text">John Smith</span>
+                      <svg
+                        style="vertical-align:-0.125em"
+                        fill="currentColor"
+                        height="1em"
+                        width="1em"
+                        viewBox="0 0 320 512"
+                        aria-hidden="true"
+                        role="img"
+                        class="pf-c-dropdown__toggle-icon"
+                      >
+                        <path
+                          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          transform=""
+                        ></path>
+                      </svg>
+                    </button>
+                    <div class="pf-c-dropdown__menu" hidden>[Panel contents here]</div>
+                  </div>
                 </div>
               </div>
               <img
@@ -133,7 +151,7 @@ storiesOf('Page Test', module)
                 alt="Avatar image"
                 class="pf-c-avatar"
               />
-            </pf-page-header-tools>
+            </pf-page-test-header-tools>
           </pf-page-test-header>
         </pf-page-test>
       </section>
