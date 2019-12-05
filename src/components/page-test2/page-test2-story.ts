@@ -11,6 +11,9 @@ import './page-test2-header-brand';
 import './page-test2-header-brand-link';
 import './page-test2-header-brand-toggle';
 
+import '@patternfly/patternfly/patternfly-base.css';
+import '@patternfly/patternfly/patternfly-addons.css';
+
 const createProps = () => ({
   onClick: action('click'),
   additionalClasses: text('Additional classes', ''),
