@@ -1,0 +1,5 @@
+@import '../base/base.scss';
+
+:host(#{$pf--prefix}-page-test2-header-brand-link) {
+  @import './patternfly-page.scss';
+}
