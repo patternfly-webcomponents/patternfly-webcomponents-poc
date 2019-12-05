@@ -1,7 +1,6 @@
 @import '../base/base.scss';
-@import 'patternfly-button.scss';
 
 // testing host styles
-:host(#{$pf--prefix}-btn) {
-  display: inline-flex;
+:host(#{$pf--prefix}-btn-test) {
+  @import 'patternfly-button.scss';
 }
