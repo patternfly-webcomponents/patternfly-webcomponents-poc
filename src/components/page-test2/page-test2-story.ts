@@ -4,19 +4,19 @@ import { storiesOf } from '@storybook/polymer';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import './page-test';
-import './page-test-header';
-import './page-test-header-tools';
-import './page-test-header-brand';
-import './page-test-header-brand-link';
-import './page-test-header-brand-toggle';
+import './page-test2';
+import './page-test2-header';
+import './page-test2-header-tools';
+import './page-test2-header-brand';
+import './page-test2-header-brand-link';
+import './page-test2-header-brand-toggle';
 
 const createProps = () => ({
   onClick: action('click'),
   additionalClasses: text('Additional classes', ''),
 });
 
-storiesOf('Page-test', module)
+storiesOf('Page-test2 (!shadow)', module)
   .addDecorator(withKnobs)
   .add('Default', () => {
     const { additionalClasses } = createProps();
@@ -24,18 +24,18 @@ storiesOf('Page-test', module)
       <section style="padding: 20px">
         <h1 class="pf-c-title pf-m-3xl">Page</h1>
         <br />
-        <pf-page-test class=${additionalClasses}>
-          <pf-page-test-header>
-            <pf-page-test-header-brand>
-              <pf-page-test-header-brand-link>
+        <pf-page-test2 class=${additionalClasses}>
+          <pf-page-test2-header>
+            <pf-page-test2-header-brand>
+              <pf-page-test2-header-brand-link>
                 <img
                   class="pf-c-brand"
                   src="data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMjUgMzUiIHZpZXdCb3g9IjAgMCAyMjUgMzUiIHdpZHRoPSIyMjUiIGhlaWdodD0iMzUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxNy40Nzk5IiB4Mj0iMTcuNDc5OSIgeTE9IjIuMDM2OSIgeTI9IjM0LjExMTMiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZjFmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzZjMSIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZD0ibTEyLjMgMjYuNy01LjIgMS4yLTctOS45IDE3LTE2LjYuNC0uNC40LjQgMTcgMTYuNi03IDkuOS01LjItMS4yLTUuMiA3LjN6bTUuMiA1LjYgNC4yLTUuOC0xLjMtLjMtMi44IDQuMS0zLTQuMS0xLjMuM3ptLjEtMy44IDItMy0yLjEtMjAuMy0yLjEgMjAuM3ptOS44LTEuOCA2LjEtOC42LTEwLjMtMTAuMSA1LjUgNi43LTMuMSA0LjMgMSAyLjMtMy4yIDQuNXptLTE5LjkgMCA0LjEtLjktMy4yLTQuNSAxLTIuMy0zLjEtNC4zIDUuNC02LjctMTAuMyAxMC4xem01LjItMS4yIDEuMy0uMy0zLjktNS4zLS41IDEuMnptOS42IDAgMy4xLTQuNC0uNS0xLjItMy45IDUuM3ptLTEuOC0xLjQgMy45LTUuMy01LjgtMTMuMnptLTYuMSAwIDItMTguNS01LjggMTMuM3ptLTQuNS02LjIgNS44LTEzLjEtOC4xIDkuOXptMTUuMiAwIDIuMy0zLjItOC4xLTkuOXoiIGZpbGw9InVybCgjYSkiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJtNTAuOCAyNHYtMTIuMWg1LjJjLjggMCAxLjQuMSAxLjkuM3MuOS41IDEuMy45Yy4zLjQuNi44LjcgMS4yLjEuNS4yLjkuMiAxLjQgMCAuMyAwIC42LS4xLjlzLS4yLjYtLjMuOS0uMy41LS41LjhjLS4yLjItLjUuNS0uOC43cy0uNy4zLTEuMS40LS44LjItMS4zLjJoLTIuOXY0LjR6bTUuMy02LjdjLjMgMCAuNSAwIC44LS4xLjItLjEuNC0uMi41LS40cy4yLS4zLjMtLjUuMS0uNC4xLS42IDAtLjQtLjEtLjVjMC0uMi0uMS0uNC0uMy0uNS0uMS0uMi0uMy0uMy0uNS0uNHMtLjUtLjItLjgtLjJoLTN2My4yeiIvPjxwYXRoIGQ9Im03Ni4yIDI0LS45LTIuNWgtNC43bC0uOSAyLjVoLTIuNWw0LjYtMTIuMWgyLjNsNC42IDEyLjF6bS0yLjktNy44Yy0uMS0uMS0uMS0uMy0uMi0uNXMtLjEtLjQtLjItLjZjMCAuMi0uMS40LS4yLjZzLS4xLjQtLjIuNWwtMS4yIDMuMWgzLjJ6Ii8+PHBhdGggZD0ibTkxLjkgMTQuMnY5LjhoLTIuM3YtOS44aC0zLjV2LTIuM2g5LjN2Mi4zeiIvPjxwYXRoIGQ9Im0xMTAgMTQuMnY5LjhoLTIuM3YtOS44aC0zLjV2LTIuM2g5LjN2Mi4zeiIvPjxwYXRoIGQ9Im0xMjMuMSAyNHYtMTIuMWg4LjN2Mi4yaC01Ljl2Mi41aDMuNXYyLjJoLTMuNXYyLjloNi4zdjIuM3oiLz48cGF0aCBkPSJtMTQxLjUgMjR2LTEyLjFoNS42Yy44IDAgMS40LjEgMS45LjNzLjkuNSAxLjIuOC41LjguNyAxLjJjLjEuNS4yLjkuMiAxLjQgMCAuMy0uMS43LS4xIDEtLjEuNC0uMi43LS40IDFzLS40LjYtLjcuOS0uNi41LTEgLjZsMi4zIDQuOGgtMi42bC0yLjMtNC41aC0yLjR2NC42em01LjctNi43Yy4zIDAgLjUgMCAuOC0uMS4yLS4xLjQtLjIuNS0uNC4xLS4xLjItLjMuMy0uNXMuMS0uNC4xLS42IDAtLjQtLjEtLjZjMC0uMi0uMS0uNC0uMi0uNXMtLjMtLjMtLjUtLjQtLjUtLjEtLjgtLjFoLTMuM3YzLjJ6Ii8+PHBhdGggZD0ibTE2OC44IDI0LTQuOC03LjFjLS4xLS4xLS4yLS4zLS4zLS40LS4xLS4yLS4yLS4zLS4yLS41di41LjUgN2gtMi4zdi0xMi4xaDIuMmw0LjcgN2MuMS4xLjIuMy4zLjQuMS4yLjIuMy4zLjUgMC0uMiAwLS4zIDAtLjVzMC0uMyAwLS40di03aDIuM3YxMi4xeiIvPjxwYXRoIGQ9Im0xODEuMyAyNHYtMTIuMWg4LjF2Mi4yaC01Ljh2Mi41aDMuN3YyLjJoLTMuN3Y1LjJ6Ii8+PHBhdGggZD0ibTE5OC44IDI0di0xMi4xaDIuM3Y5LjloNS44djIuMnoiLz48cGF0aCBkPSJtMjE4LjIgMjR2LTQuN2wtNC41LTcuNGgyLjZsMyA0LjkgMy00LjloMi43bC00LjUgNy40djQuN3oiLz48L2c+PC9zdmc+Cg=="
                   alt="Patternfly Logo"
                 />
-              </pf-page-test-header-brand-link>
-            </pf-page-test-header-brand>
-            <pf-page-test-header-tools>
+              </pf-page-test2-header-brand-link>
+            </pf-page-test2-header-brand>
+            <pf-page-test2-header-tools>
               <div class="pf-c-page__header-tools-group pf-m-icons">
                 <button class="pf-c-button pf-m-plain" type="button" aria-label="Alerts">
                   <svg
@@ -151,9 +151,9 @@ storiesOf('Page-test', module)
                 alt="Avatar image"
                 class="pf-c-avatar"
               />
-            </pf-page-test-header-tools>
-          </pf-page-test-header>
-        </pf-page-test>
+            </pf-page-test2-header-tools>
+          </pf-page-test2-header>
+        </pf-page-test2>
       </section>
     `;
   });
