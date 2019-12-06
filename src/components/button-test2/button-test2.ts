@@ -1,9 +1,12 @@
-import '@patternfly/react-styles/css/components/Button/button';
 import classnames from 'classnames';
 import { html, property, customElement } from 'lit-element';
 import CustomElement from '../base/customElement';
 import { pfPrefix } from '../../globals/settings';
-// import styles from './button-test2.scss';
+// import './button-test2.scss';
+
+// See .storybook/_container.scss
+// import '@patternfly/react-styles/css/components/Button/button';
+// import '@patternfly/patternfly/components/Button/button.css';
 
 /**
  * Button kinds.
@@ -78,7 +81,6 @@ class PFButtonTest2 extends CustomElement {
       [`${pfPrefix}-m-${kind}`]: kind,
     });
     return html`
-      <link rel="stylesheet" href="@patternfly/patternfly/components/Button/button.css" />
       <button id="button" class="${classes}" ?disabled=${disabled}><slot></slot></button>
     `;
   }

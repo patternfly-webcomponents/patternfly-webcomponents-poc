@@ -5,9 +5,6 @@ import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 import { BUTTON_KIND } from '../button-test2/button-test2';
 import './shadow-wrapper';
 
-import '@patternfly/patternfly/patternfly-base.css';
-import '@patternfly/patternfly/patternfly-addons.css';
-
 const kinds = {
   [`Primary button (${BUTTON_KIND.PRIMARY})`]: BUTTON_KIND.PRIMARY,
   [`Secondary button (${BUTTON_KIND.SECONDARY})`]: BUTTON_KIND.SECONDARY,
