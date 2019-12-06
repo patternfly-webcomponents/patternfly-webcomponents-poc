@@ -4,8 +4,9 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 import { BUTTON_KIND } from './button-test2';
 
-import '@patternfly/patternfly/patternfly-base.css';
-import '@patternfly/patternfly/patternfly-addons.css';
+// See .storybook/_container.scss
+// import '@patternfly/patternfly/patternfly-base.css';
+// import '@patternfly/patternfly/components/Button/button.css';
 
 const kinds = {
   [`Primary button (${BUTTON_KIND.PRIMARY})`]: BUTTON_KIND.PRIMARY,

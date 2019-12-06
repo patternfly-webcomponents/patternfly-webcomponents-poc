@@ -1326,11 +1326,11 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
-"@patternfly/patternfly@2.26.1":
-  version "2.26.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.26.1.tgz#d554e4a5e1f042bfb27b3df77d37ddb388bbc594"
+"@patternfly/patternfly@2.43.4":
+  version "2.43.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.43.4.tgz#3b862a4ab31ad19ba3bd69a9166289f31ddaec7f"
 
-"@patternfly/react-styles@^3.6.11":
+"@patternfly/react-styles@3.6.11":
   version "3.6.11"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-3.6.11.tgz#43fee9c24469a5e7fca824740c077033f7e532a8"
   dependencies:
