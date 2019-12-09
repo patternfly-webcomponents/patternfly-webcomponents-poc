@@ -215,9 +215,9 @@
   background-color: var(--pf-c-page--BackgroundColor);
 
   // Todo: slotted
-  ::slotted(*) {
-    all: inherit;
-  }
+  //::slotted(*) {
+  //  all: inherit;
+  //}
 }
 
 // Header
@@ -242,9 +242,9 @@
   }
 
   // Todo: slotted
-  ::slotted(*) {
-    all: inherit;
-  }
+  //::slotted(*) {
+  //  all: inherit;
+  //}
 }
 
 // Brand
@@ -259,9 +259,9 @@
   }
 
   // Todo: slotted
-  ::slotted(*) {
-    all: inherit;
-  }
+  //::slotted(*) {
+  //  all: inherit;
+  //}
 }
 
 // Link
@@ -328,8 +328,6 @@
 
 // Header tools
 .pf-c-page__header-tools {
-  display: grid; // Todo: This should be on parent
-
   grid-column: 2 / 3;
   align-items: center;
   margin-top: var(--pf-c-page__header-tools--MarginTop);
@@ -337,45 +335,7 @@
   margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
-  //.pf-m-icons {
-  //  display: none;
-  //  visibility: hidden;
-  //
-  //  @media screen and (min-width: $pf-global--breakpoint--lg) {
-  //    display: block;
-  //    visibility: visible;
-  //  }
-  //}
-  //
-  //.pf-m-mobile {
-  //  margin-right: 0;
-  //
-  //  @media screen and (min-width: $pf-global--breakpoint--lg) {
-  //    display: none;
-  //    visibility: hidden;
-  //  }
-  //}
-  //
-  //.pf-m-user {
-  //  display: none;
-  //  visibility: hidden;
-  //
-  //  @media screen and (min-width: $pf-global--breakpoint--md) {
-  //    display: block;
-  //    visibility: visible;
-  //  }
-  //}
-  //
-  //.pf-c-avatar {
-  //  margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
-  //}
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    grid-column: 3 / 4;
-  }
-
-  // Todo: slotted
-  ::slotted(.pf-m-icons) {
+  .pf-m-icons {
     display: none;
     visibility: hidden;
 
@@ -385,8 +345,16 @@
     }
   }
 
-  // Todo: slotted
-  ::slotted(.pf-m-user) {
+  .pf-m-mobile {
+    margin-right: 0;
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .pf-m-user {
     display: none;
     visibility: hidden;
 
@@ -396,10 +364,40 @@
     }
   }
 
-  // Todo: slotted
-  ::slotted(.pf-c-avatar) {
+  .pf-c-avatar {
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    grid-column: 3 / 4;
+  }
+
+  // Todo: slotted
+  //::slotted(.pf-m-icons) {
+  //  display: none;
+  //  visibility: hidden;
+  //
+  //  @media screen and (min-width: $pf-global--breakpoint--lg) {
+  //    display: block;
+  //    visibility: visible;
+  //  }
+  //}
+
+  // Todo: slotted
+  //::slotted(.pf-m-user) {
+  //  display: none;
+  //  visibility: hidden;
+  //
+  //  @media screen and (min-width: $pf-global--breakpoint--md) {
+  //    display: block;
+  //    visibility: visible;
+  //  }
+  //}
+
+  // Todo: slotted
+  //::slotted(.pf-c-avatar) {
+  //  margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  //}
 }
 
 .pf-c-page__header-tools-group {
@@ -410,9 +408,9 @@
   }
 
   // Todo: slotted
-  ::slotted(*) {
-    all: inherit;
-  }
+  //::slotted(*) {
+  //  all: inherit;
+  //}
 }
 
 // Sidebar
@@ -564,4 +562,24 @@
       }
     }
   }
+}
+
+// Overrides
+
+slot {
+  display: contents !important;
+}
+
+pf-page-test,
+pf-page-test-header,
+pf-page-test-header-brand,
+pf-page-test-header-brand-link,
+pf-page-test-header-brand-toggle,
+pf-page-test-header-tools {
+  display: contents !important;
+}
+
+.pf-c-page__header-brand,
+.pf-c-page__header-tools {
+  display: flex;
 }
