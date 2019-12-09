@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
+import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import createReactCustomElementType, { booleanSerializer } from '../../globals/wrappers/createReactCustomElementType';
 import { BUTTON_KIND } from './button';
 
@@ -25,15 +25,15 @@ const createProps = () => ({
   disabled: boolean('Disabled (disabled)', false),
   small: boolean('Small (small)', false),
   href: text('Link href (href)', ''),
-  onClick: action('onClick'),
+  onClick: action('click'),
 });
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('Default', () => {
-    const { kind, disabled, small, href } = createProps();
+    const { kind, disabled, small, href, onClick } = createProps();
     return (
-      <PFBtn kind={kind} disabled={disabled} small={small} href={href}>
+      <PFBtn kind={kind} disabled={disabled} small={small} href={href} onClick={onClick}>
         Button
       </PFBtn>
     );
