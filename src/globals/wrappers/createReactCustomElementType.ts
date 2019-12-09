@@ -1,6 +1,12 @@
 import React, { Component, createElement, forwardRef } from 'react';
-// import on from 'carbon-components/es/globals/js/misc/on';
+import on from './on';
 
+/*
+  Examples of writing react wrappers that is component specific.
+
+  https://www.sitepen.com/blog/wrapping-web-components-with-react/
+  https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/js/misc/on.js
+ */
 /**
  * A descriptor for a React event prop of a custom element.
  */
@@ -11,7 +17,7 @@ interface CustomElementEventDescriptor {
   name: string;
 
   /**
-   * A boolean to detemine usage of capture mode or the event options.
+   * A boolean to determine usage of capture mode or the event options.
    */
   options?: boolean | EventListenerOptions;
 }
@@ -115,7 +121,7 @@ const convertProps = (props: CustomElementTypeProps, descriptor: CustomElementPr
  * @param callback A callback function that runs as the custom events fire.
  * @returns A handle that allows to release all event listeners attached.
  */
-/*
+
 const attachEventListeners = (
   elem: HTMLElement,
   descriptor: CustomElementPropsDescriptor,
@@ -155,7 +161,7 @@ const attachEventListeners = (
     },
   };
 };
-*/
+
 /**
  * @param name The tag name of the custom element.
  * @param descriptor A descriptor for a set of React props for attributes of a custom element.
@@ -208,12 +214,12 @@ const createReactCustomElementType = (name: string, descriptor: CustomElementPro
      * @param propName The React prop name associated with the event listener.
      * @param event The event.
      */
-    // private _handleEvent = (propName: string, event: Event) => {
-    //   const { [propName]: listener } = this.props;
-    //   if (listener) {
-    //     listener.call(event.currentTarget, event);
-    //   }
-    // };
+    private _handleEvent = (propName: string, event: Event) => {
+      const { [propName]: listener } = this.props;
+      if (listener) {
+        listener.call(event.currentTarget, event);
+      }
+    };
 
     /**
      * Handles getting/losing the React `ref` object of this custom element.
@@ -225,7 +231,7 @@ const createReactCustomElementType = (name: string, descriptor: CustomElementPro
         this._eventListenersHandle = null;
       }
       if (elem) {
-        // this._eventListenersHandle = attachEventListeners(elem, descriptor, this._handleEvent);
+        this._eventListenersHandle = attachEventListeners(elem, descriptor, this._handleEvent);
       }
     };
 
