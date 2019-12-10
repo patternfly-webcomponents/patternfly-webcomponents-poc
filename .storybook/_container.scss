@@ -5,3 +5,30 @@ $fa-font-path: 'fonts/webfonts';
 @import '~@patternfly/patternfly/patternfly-base.scss';
 @import '~@patternfly/patternfly/components/Page/page.scss';
 @import '~@patternfly/patternfly/components/Button/button.scss';
+
+slot {
+  display: contents !important;
+}
+
+pf-page-test,
+pf-page-test-header,
+pf-page-test-header-brand,
+pf-page-test-header-brand-link,
+pf-page-test-header-brand-toggle,
+pf-page-test-header-tools {
+  display: contents !important;
+}
+
+pf-page-test2,
+pf-page-test2-header,
+pf-page-test2-header-brand,
+pf-page-test2-header-brand-link,
+pf-page-test2-header-brand-toggle,
+pf-page-test2-header-tools {
+  display: contents !important;
+}
+
+.pf-c-page__header-brand,
+.pf-c-page__header-tools {
+  display: flex;
+}

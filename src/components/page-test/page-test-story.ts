@@ -24,7 +24,7 @@ storiesOf('Page-test', module)
       <section style="padding: 20px">
         <h1 class="pf-c-title pf-m-3xl">Page</h1>
         <br />
-        <pf-page-test class=${additionalClasses}>
+        <pf-page-test class="${additionalClasses}">
           <pf-page-test-header>
             <pf-page-test-header-brand>
               <pf-page-test-header-brand-link>
