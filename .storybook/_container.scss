@@ -3,8 +3,11 @@ $pf-global--font-path: 'fonts';
 $fa-font-path: 'fonts/webfonts';
 
 @import '~@patternfly/patternfly/patternfly-base.scss';
-@import '~@patternfly/patternfly/components/Page/page.scss';
+@import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 @import '~@patternfly/patternfly/components/Button/button.scss';
+@import '~@patternfly/patternfly/components/Page/page.scss';
+
+// Overrides
 
 slot {
   display: contents !important;
