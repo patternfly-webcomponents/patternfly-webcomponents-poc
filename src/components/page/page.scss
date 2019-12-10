@@ -3,24 +3,36 @@
 // testing host styles
 :host(#{$pf--prefix}-page) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
 
 :host(#{$pf--prefix}-page-header) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
 
 :host(#{$pf--prefix}-page-header-brand) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
 
 :host(#{$pf--prefix}-page-header-brand-toggle) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
 
 :host(#{$pf--prefix}-page-header-brand-link) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
 
 :host(#{$pf--prefix}-page-header-tools) {
   @import '~@patternfly/patternfly/components/Page/page.scss';
+  @import '~@patternfly/patternfly/components/Button/button.scss';
+  @import '~@patternfly/patternfly/components/Dropdown/dropdown.scss';
 }
