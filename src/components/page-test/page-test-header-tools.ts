@@ -1,7 +1,7 @@
-import classnames from 'classnames';
+// import classnames from 'classnames';
 import { html, property, customElement, LitElement } from 'lit-element';
 import { pfPrefix } from '../../globals/settings';
-import styles from './page-test-header-tools.scss';
+import styles from './page-test.scss';
 
 /**
  * Page Header Tools.
@@ -19,10 +19,13 @@ class PFPageHeaderToolsTest extends LitElement {
   }
 
   render() {
-    const { class: additionalClass } = this;
-    const classes = classnames(additionalClass, `${pfPrefix}-c-page__header-tools`);
+    // const { class: additionalClass } = this;
+    // const classes = classnames(additionalClass, `${pfPrefix}-c-page__header-tools`);
+    // return html`
+    //   <div class="${classes}"><slot></slot></div>
+    // `;
     return html`
-      <div class="${classes}"><slot></slot></div>
+      <slot></slot>
     `;
   }
 

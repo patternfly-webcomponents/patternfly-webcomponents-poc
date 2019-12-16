@@ -36,7 +36,7 @@ storiesOf('Page-test2 (!shadow)', module)
               </pf-page-test2-header-brand-link>
             </pf-page-test2-header-brand>
             <pf-page-test2-header-tools>
-              <div class="pf-c-page__header-tools-group pf-m-icons">
+              <div class="pf-c-page__header-tools-group">
                 <button class="pf-c-button pf-m-plain" type="button" aria-label="Alerts">
                   <svg
                     style="vertical-align:-0.125em"
