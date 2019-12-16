@@ -24,9 +24,9 @@ storiesOf('Page-test', module)
       <section style="padding: 20px">
         <h1 class="pf-c-title pf-m-3xl">Page</h1>
         <br />
-        <pf-page-test class="${additionalClasses}">
-          <pf-page-test-header>
-            <pf-page-test-header-brand>
+        <pf-page-test class="pf-c-page ${additionalClasses}">
+          <pf-page-test-header class="pf-c-page__header">
+            <pf-page-test-header-brand class="pf-c-page__header-brand">
               <pf-page-test-header-brand-link>
                 <img
                   class="pf-c-brand"
@@ -35,8 +35,8 @@ storiesOf('Page-test', module)
                 />
               </pf-page-test-header-brand-link>
             </pf-page-test-header-brand>
-            <pf-page-test-header-tools>
-              <div class="pf-c-page__header-tools-group pf-m-icons">
+            <pf-page-test-header-tools class="pf-c-page__header-tools">
+              <div class="pf-c-page__header-tools-group">
                 <button class="pf-c-button pf-m-plain" type="button" aria-label="Alerts">
                   <svg
                     style="vertical-align:-0.125em"

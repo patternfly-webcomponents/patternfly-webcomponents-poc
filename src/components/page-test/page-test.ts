@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+// import classnames from 'classnames';
 import { html, property, customElement, LitElement } from 'lit-element';
 import { pfPrefix } from '../../globals/settings';
 import styles from './page-test.scss';
@@ -19,10 +19,13 @@ class PFPageTest extends LitElement {
   }
 
   render() {
-    const { class: additionalClass } = this;
-    const classes = classnames(additionalClass, `${pfPrefix}-c-page`);
+    // const { class: additionalClass } = this;
+    // const classes = classnames(additionalClass, `${pfPrefix}-c-page`);
+    // return html`
+    //   <div class="${classes}"><slot></slot></div>
+    // `;
     return html`
-      <div class="${classes}"><slot></slot></div>
+      <slot></slot>
     `;
   }
 
