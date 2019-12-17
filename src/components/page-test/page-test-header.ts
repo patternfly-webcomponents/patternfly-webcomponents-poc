@@ -21,11 +21,9 @@ class PFPageHeaderTest extends LitElement {
   render() {
     // const { class: additionalClass } = this;
     // const classes = classnames(additionalClass, `${pfPrefix}-c-page__header`);
-    // return html`
-    //   <header role="banner" class="${classes}"><slot></slot></header>
-    // `;
+    const classes = `${pfPrefix}-c-page__header`;
     return html`
-      <slot></slot>
+      <header role="banner" class="${classes}"><slot></slot></header>
     `;
   }
 
