@@ -74,7 +74,8 @@ class PFButtonTest3 extends CustomElement {
   myClick;
 
   createRenderRoot() {
-    return this;
+    // return this;
+    return this.attachShadow({ mode: 'open', delegatesFocus: true });
   }
 
   render() {
