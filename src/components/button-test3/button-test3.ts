@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { html, property, customElement, eventOptions } from 'lit-element';
+import { html, property, customElement } from 'lit-element';
 import CustomElement from '../base/customElement';
 import { pfPrefix } from '../../globals/settings';
 
