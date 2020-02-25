@@ -50,8 +50,8 @@ export enum BUTTON_KIND {
 /**
  * Button.
  */
-@customElement(`${pfPrefix}-btn-test2`)
-class PFButtonTest2 extends CustomElement {
+@customElement(`${pfPrefix}-btn-test3`)
+class PFButtonTest3 extends CustomElement {
   /**
    * `true` if the button should be disabled. Corresponds to the attribute with the same name.
    */
@@ -70,19 +70,24 @@ class PFButtonTest2 extends CustomElement {
   @property({ reflect: false })
   class = '';
 
+  /* handle onClick event */
+  @property({ type: Function })
+  click;
+
   createRenderRoot() {
-    return this;
+    // return this;
+    return this.attachShadow({ mode: 'open', delegatesFocus: true });
   }
 
   render() {
-    const { disabled, kind, class: additionalClass } = this;
+    const { click, disabled, kind, class: additionalClass } = this;
     const classes = classnames(additionalClass, `${pfPrefix}-c-button`, {
       [`${pfPrefix}-m-${kind}`]: kind,
     });
     return html`
-      <button id="button" class="${classes}" ?disabled=${disabled}><slot></slot></button>
+      <button id="button" class="${classes}" ?disabled=${disabled} @click=${click}><slot></slot></button>
     `;
   }
 }
 
-export default PFButtonTest2;
+export default PFButtonTest3;
