@@ -44,7 +44,7 @@ storiesOf('Button-test3 (event-in-comp)', module)
         <pf-btn-test3 kind="secondary" @click=${onClick}>
           Secondary Button
         </pf-btn-test3>
-        <pf-btn-test3 kind="secondary" .myClick=${() => handleClick('clicking')}>
+        <pf-btn-test3 kind="secondary" .click=${() => handleClick('clicking')}>
           My Button
         </pf-btn-test3>
         <br />

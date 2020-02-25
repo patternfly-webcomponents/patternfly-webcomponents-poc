@@ -70,8 +70,9 @@ class PFButtonTest3 extends CustomElement {
   @property({ reflect: false })
   class = '';
 
+  /* handle onClick event */
   @property({ type: Function })
-  myClick;
+  click;
 
   createRenderRoot() {
     // return this;
@@ -79,12 +80,12 @@ class PFButtonTest3 extends CustomElement {
   }
 
   render() {
-    const { myClick, disabled, kind, class: additionalClass } = this;
+    const { click, disabled, kind, class: additionalClass } = this;
     const classes = classnames(additionalClass, `${pfPrefix}-c-button`, {
       [`${pfPrefix}-m-${kind}`]: kind,
     });
     return html`
-      <button id="button" class="${classes}" ?disabled=${disabled} @click=${myClick}><slot></slot></button>
+      <button id="button" class="${classes}" ?disabled=${disabled} @click=${click}><slot></slot></button>
     `;
   }
 }
